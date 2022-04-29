@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CustomLink from '../CustomLink/CustomLink';
-import logo from '../../../logo.png';
+import logo from '../../../images/logo.png';
 import { MenuAlt2Icon, XCircleIcon } from '@heroicons/react/solid'
 import './Header.css'
 
