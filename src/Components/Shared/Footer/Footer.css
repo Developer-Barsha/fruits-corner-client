@@ -5,6 +5,7 @@ footer {
     display: flex;
     gap: 50px;
     margin-top: 30px;
+    border-bottom: 1px solid #8259ff;
 }
 
 .footer-first {
@@ -25,14 +26,15 @@ footer {
     padding-bottom: 10px;
 }
 
-footer ul li {
+.footer-sec ul li {
     list-style: none;
     display: flex;
     margin-bottom: 5px;
-    gap: 10px;
+    margin-left: -30px;
+    gap: 20px;
 }
 
-footer ul li img {
+.footer-sec ul li img {
     width: 30px;
     margin-bottom: 5px;
     border-radius: 50%;
@@ -40,6 +42,20 @@ footer ul li img {
 
 footer ul li:hover {
     color: #8259ff;
+}
+
+.social ul li img{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.social ul li{
+    list-style: none;
+}
+
+.social ul{
+    display: flex;
+    gap: 10px;
 }
 
 @media only screen and (max-width:700px) {

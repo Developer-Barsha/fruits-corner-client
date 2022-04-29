@@ -24,10 +24,17 @@ header .logo img {
 nav {
     display: flex;
     gap: 25px;
+    align-items: center;
 }
 
 .sm-menu, .menu-icon {
     display: none;
+}
+
+.signOut-btn{
+    background-color: #ffbc3e;
+    padding: 5px 12px;
+    border: 0;
 }
 
 @media only screen and (max-width:700px){

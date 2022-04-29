@@ -1,17 +1,26 @@
 import React, { useState } from 'react';
 import CustomLink from '../CustomLink/CustomLink';
 import logo from '../../../images/logo.png';
-import { MenuAlt2Icon, XCircleIcon } from '@heroicons/react/solid'
+import { MenuAlt2Icon, XCircleIcon } from '@heroicons/react/solid';
+import { useAuthState } from 'react-firebase-hooks/auth'
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 import './Header.css'
 
 const Header = () => {
+    const [user] = useAuthState(auth);
     const [show, setShow] = useState(false);
     const nav =
         < nav >
             <CustomLink to={'/'}>Home</CustomLink>
             <CustomLink to={'/fgvdf'}>Home</CustomLink>
             <CustomLink to={'/zfc'}>Home</CustomLink>
-            <CustomLink to={'/login'}>Login</CustomLink>
+            {
+                user ?
+                    <button className='signOut-btn' onClick={() => signOut(auth)}>Sign Out</button>
+                    :
+                    <CustomLink to={'/login'}>Login</CustomLink>
+            }
             <CustomLink to={'/register'}>Register</CustomLink>
         </nav >;
 
@@ -29,9 +38,9 @@ const Header = () => {
             <div className="menu-icon">
                 {
                     show ?
-                        <XCircleIcon style={{ width: '35px', color:'#ffbc3e' }} onClick={() => setShow(!show)} />
+                        <XCircleIcon style={{ width: '35px', color: '#ffbc3e' }} onClick={() => setShow(!show)} />
                         :
-                        <MenuAlt2Icon style={{ width: '30px', color:'#ffbc3e' }} onClick={() => setShow(!show)} />
+                        <MenuAlt2Icon style={{ width: '30px', color: '#ffbc3e' }} onClick={() => setShow(!show)} />
                 }
             </div>
 

@@ -1,0 +1,23 @@
+.socialLogin{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialLogin button{
+    background-color: #8259ff;
+    padding: 8px 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 0;    
+    border-radius: 10px;
+    color: #fff;
+}
+
+.socialLogin button img{
+    width: 30px;
+    border-radius: 50%;
+}
