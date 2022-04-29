@@ -8,11 +8,11 @@ const Header = () => {
     const [show, setShow] = useState(true);
     const nav =
         < nav >
-            <CustomLink to={'/bou'}>Home</CustomLink>
             <CustomLink to={'/'}>Home</CustomLink>
-            <CustomLink to={'/'}>Home</CustomLink>
-            <CustomLink to={'/'}>Home</CustomLink>
-            <CustomLink to={'/'}>Home</CustomLink>
+            <CustomLink to={'/sefcsd'}>Home</CustomLink>
+            <CustomLink to={'/fgvdf'}>Home</CustomLink>
+            <CustomLink to={'/zfc'}>Home</CustomLink>
+            <CustomLink to={'/fgv'}>Home</CustomLink>
         </nav >;
 
 
