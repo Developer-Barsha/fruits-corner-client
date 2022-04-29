@@ -10,11 +10,11 @@ const Register = () => {
     const navigate = useNavigate();
     const [user] = useAuthState(auth);
 
-    useEffect(() => {
-        if (user) {
-            navigate('/')
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (user) {
+    //         navigate('/')
+    //     }
+    // }, [])
 
     const handleRegister = async e => {
         e.preventDefault();

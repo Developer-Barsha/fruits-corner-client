@@ -11,9 +11,9 @@ const SocialLogin = () => {
     const [message, setMessage] = useState('');
 
     useEffect(()=>{
-        if(user){
-            return navigate('/');
-        }
+        // if(user){
+        //     return navigate('/');
+        // }
         if(error){
             setMessage(error?.message);
         }

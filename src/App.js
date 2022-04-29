@@ -5,6 +5,7 @@ import Header from './Components/Shared/Header/Header';
 import Footer from './Components/Shared/Footer/Footer';
 import Login from './Components/User/Login/Login';
 import Register from './Components/User/Register/Register';
+import RequireAuth from './Components/Shared/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/login' element={<Login />}></Route>
-        <Route path='/register' element={<Register />}></Route>
+        <Route path='/register' element={<RequireAuth><Register /></RequireAuth>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
