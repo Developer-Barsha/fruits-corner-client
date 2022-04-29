@@ -29,9 +29,9 @@ const Header = () => {
             <div className="menu-icon">
                 {
                     show ?
-                        <XCircleIcon style={{ width: '35px' }} onClick={() => setShow(!show)} />
+                        <XCircleIcon style={{ width: '35px', color:'#ffbc3e' }} onClick={() => setShow(!show)} />
                         :
-                        <MenuAlt2Icon style={{ width: '30px' }} onClick={() => setShow(!show)} />
+                        <MenuAlt2Icon style={{ width: '30px', color:'#ffbc3e' }} onClick={() => setShow(!show)} />
                 }
             </div>
 
