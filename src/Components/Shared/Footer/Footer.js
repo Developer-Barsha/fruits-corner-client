@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RequireAuth = () => {
+const Footer = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const RequireAuth = () => {
     );
 };
 
-export default RequireAuth;
+export default Footer;
