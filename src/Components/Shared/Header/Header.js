@@ -9,10 +9,10 @@ const Header = () => {
     const nav =
         < nav >
             <CustomLink to={'/'}>Home</CustomLink>
-            <CustomLink to={'/sefcsd'}>Home</CustomLink>
             <CustomLink to={'/fgvdf'}>Home</CustomLink>
             <CustomLink to={'/zfc'}>Home</CustomLink>
-            <CustomLink to={'/fgv'}>Home</CustomLink>
+            <CustomLink to={'/login'}>Login</CustomLink>
+            <CustomLink to={'/register'}>Register</CustomLink>
         </nav >;
 
 
