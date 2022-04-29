@@ -1,0 +1,44 @@
+.fruit{
+    width: 320px;
+    height: 470px;
+    border: 1px solid #555;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 15px;
+    position: relative;
+}
+
+.fruit img{
+    width: 120px;
+    margin-right: 10px;
+}
+
+.fruit div{
+    display: flex;
+    gap: 30%;
+    line-height: 0;
+    padding: 6px 0 2px 0;
+}
+
+.fruit-name{
+    color: #ffbc3e;
+}
+
+.fruit-info>span{
+    color: #8259ff;
+}
+
+.fruit button{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #8259ff;
+    padding: 8px 15px;
+    border: 0;
+    color: white;
+}
+
+.fruit button:hover{
+    background-color: #ffbc3e;
+    transition: 0.5s;
+}
