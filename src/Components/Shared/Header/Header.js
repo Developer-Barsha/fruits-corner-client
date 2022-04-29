@@ -5,7 +5,7 @@ import { MenuAlt2Icon, XCircleIcon } from '@heroicons/react/solid'
 import './Header.css'
 
 const Header = () => {
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
     const nav =
         < nav >
             <CustomLink to={'/'}>Home</CustomLink>

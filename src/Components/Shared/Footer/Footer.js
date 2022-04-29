@@ -6,12 +6,13 @@ const Footer = () => {
         <section>
             <footer>
                 <div className='footer-first'>
-                    <h1>Fruits Corner</h1>
+                    <h1 className='footer-title'>Fruits Corner</h1>
                     <p>Fruits are an excellent source of essential vitamins and minerals, and they are high in fiber. You get to enjoy a variety of flavors and textures. And lots and lots of fiber.</p>
                 </div>
 
                 <div className='footer-sec'>
                     <div>
+                        <h2 className='footer-title'>Links</h2>
                         <ul>
                             <li>About Us</li>
                             <li>Services</li>
@@ -22,6 +23,7 @@ const Footer = () => {
                     </div>
 
                     <div>
+                        <h2 className='footer-title'>Social</h2>
                         <ul>
                             <li> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSHnjhohZvjxf19zHrR8UKszTq5mIfH9YJQ&usqp=CAU" alt="" /> Facebook</li>
                             <li> <img src="https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/article_images/2018/05/05/file6zcmsgmbeah12366y3nb.jpg?itok=i6JYWNQC" alt="" /> Twitter</li>
