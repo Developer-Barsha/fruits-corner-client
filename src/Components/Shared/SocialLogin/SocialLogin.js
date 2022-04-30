@@ -25,12 +25,12 @@ const SocialLogin = () => {
             <div className='socialLogin'>
             <button onClick={()=>signInWithGoogle()}>
                 <img src="https://www.transparentpng.com/thumb/google-logo/google-logo-png-icon-free-download-SUF63j.png" alt="" />
-                With Google
+                Google
             </button>
 
             <button>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSHnjhohZvjxf19zHrR8UKszTq5mIfH9YJQ&usqp=CAU" alt="" />
-                With Facebook
+                Facebook
             </button>
         </div>
         </section>

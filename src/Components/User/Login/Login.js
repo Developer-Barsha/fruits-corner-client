@@ -1,18 +1,20 @@
 import React,{useEffect, useState} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import './Login.css'
 import auth from '../../../firebase.init';
+import './Login.css'
 
 const Login = () => {
     const [signInWithEmailAndPassword,user,loading,error] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
     const [message, setMessage] = useState('');
+    const location = useLocation();
+    const from = location?.state?.from?.pathName || '/';
 
     useEffect(()=>{
         if(user){
-            return navigate('/');
+            return navigate(from, {replace:true});
         }
         if(error){
             setMessage(error?.message);

@@ -69,4 +69,20 @@ footer ul li:hover {
     .footer-first, .footer-sec  {
         width: 100%;
     }
+
+    .footer-bottom{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .footer-bottom p{
+        order: 2;
+    }
+
+    .footer-bottom div{
+        order: 1;
+    }
 }

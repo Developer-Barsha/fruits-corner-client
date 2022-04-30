@@ -13,8 +13,18 @@ const Header = () => {
     const nav =
         < nav >
             <CustomLink to={'/'}>Home</CustomLink>
-            <CustomLink to={'/fgvdf'}>Home</CustomLink>
-            <CustomLink to={'/zfc'}>Home</CustomLink>
+            {
+                user &&
+                    <CustomLink to={'/login'}>My Items</CustomLink>
+            }
+            {
+                user &&
+                    <CustomLink to={'/addfruit'}>Add Item</CustomLink>
+            }
+            {
+                user &&
+                    <CustomLink to={'/login'}>Inventories</CustomLink>
+            }
             {
                 user ?
                     <button className='signOut-btn' onClick={() => signOut(auth)}>Sign Out</button>

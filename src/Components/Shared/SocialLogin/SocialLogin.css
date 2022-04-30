@@ -17,6 +17,11 @@
     color: #fff;
 }
 
+.socialLogin button:hover{
+    background-color: #9e82f0;
+    transition: 0.5s;
+}
+
 .socialLogin button img{
     width: 30px;
     border-radius: 50%;

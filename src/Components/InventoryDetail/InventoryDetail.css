@@ -1,0 +1,35 @@
+.inventoryDeatail-part {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.item-btn{
+    background-color: #8259ff;
+    padding: 5px 20px;
+    border: 0;
+    color: white;
+}
+
+.quantity-price {
+    gap: 20px;
+}
+
+.item-btn{
+    background-color: #ffbc3e;
+}
+
+@media only screen and (max-width:900px) {
+    .inventory-detail {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .inventoryDeatail-part {
+        width: 90%;
+    }
+
+    .quantity-price {
+        flex-direction: column;
+        gap: 0px;
+    }
+}
