@@ -23,7 +23,7 @@ const Header = () => {
             }
             {
                 user &&
-                    <CustomLink to={'/login'}>Manage Items</CustomLink>
+                    <CustomLink to={'/manageitems'}>Manage Items</CustomLink>
             }
             {
                 user ?

@@ -26,8 +26,8 @@ const ManageItems = () => {
     }
 
     return (
-        <section className='px-4'>
-            <h2 className='text-center'>Manage Items</h2>
+        <section className='p-5'>
+            <h2 className='text-center pb-3'>Manage Inventories</h2>
             <div>
                 <Table striped bordered hover className='table'>
                     <thead>

@@ -1,9 +1,14 @@
-/* .fruit-row{
-    border:1px #8259ff;
-} */
 .table{
+    color: #ffbc3e;
     border: 1px solid #ffbc3e;
 } 
+.fruit-row{ 
+    color: #8259ff;
+    border: 1px solid #ffbc3e;
+}
+.fruit-row:hover{ 
+    border:1px solid #8259ff;
+}
 .delete-btn{
     padding: 3px;
     display: flex;
