@@ -1,0 +1,21 @@
+/* .fruit-row{
+    border:1px #8259ff;
+} */
+.table{
+    border: 1px solid #ffbc3e;
+} 
+.delete-btn{
+    padding: 0.2px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin: auto;
+    background-color: #ff5858;
+    color: white;
+    border: 0;
+}
+.delete-btn:hover{
+    background-color: #ff7158;
+    border: 0;
+}

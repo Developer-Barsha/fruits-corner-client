@@ -17,7 +17,7 @@ const AddFruit = () => {
 
         const fruit = {name, email, image, supplier, price, quantity, description};
         console.log(fruit);
-        fetch('http://localhost:5000/fruits', {
+        fetch('http://localhost:5000/allfruits', {
             method:'POST',
             headers:{'content-type':'application/json'},
             body: JSON.stringify(fruit)

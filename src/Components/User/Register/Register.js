@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import auth from '../../../firebase.init';
 import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -8,9 +8,15 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
-    const [createUserWithEmailAndPassword, , loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const navigate = useNavigate();
-    const [user] = useAuthState(auth);
+    // const [user] = useAuthState(auth);
+    const location = useLocation();
+    const from = location?.state?.from?.pathName || '/';
+
+    if (user) {
+        return navigate(from, { replace: true });
+    }
 
     const handleRegister = async e => {
         e.preventDefault();
@@ -23,9 +29,6 @@ const Register = () => {
             return toast('Password too short')
         }
         await createUserWithEmailAndPassword(email, password);
-        if (user) {
-            navigate('/')
-        }
     }
 
     return (
