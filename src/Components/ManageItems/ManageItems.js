@@ -21,6 +21,8 @@ const ManageItems = () => {
         })
         .then(res => res.json())
         .then(data => console.log(data));
+        const rest = fruits.filter(fruit=>fruit._id!==id);
+        setFruits(rest);
     }
 
     return (
@@ -45,7 +47,7 @@ const ManageItems = () => {
                                     <td>{fruit.price}</td>
                                     <td>{fruit.quantity}</td>
                                     <td>{fruit.supplier}</td>
-                                    <td><button onClick={()=>handleDelete(fruit._id)} className='delete-btn'>Delete <TrashIcon style={{width:'17px'}}/></button></td>
+                                    <td><button onClick={()=>handleDelete(fruit._id)} className='delete-btn'><TrashIcon style={{width:'17px'}}/></button></td>
                                 </tr>
                             )
                         }

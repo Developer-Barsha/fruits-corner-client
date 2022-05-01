@@ -20,7 +20,7 @@ const InventoryDetail = () => {
     const handleUpdateFruit = e => {
         e.preventDefault();
         const name = e.target.name.value || fruit.name;
-        const email = user?.email || fruit.email;
+        const email = fruit.email ? fruit.email : user?.email;
         const image = e.target.image.value || fruit.image;
         const supplier = e.target.supplier.value || fruit.supplier;
         const price = e.target.price.value || fruit.price;

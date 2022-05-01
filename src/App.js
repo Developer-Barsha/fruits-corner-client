@@ -10,6 +10,7 @@ import InventoryDetail from './Components/InventoryDetail/InventoryDetail';
 import AddFruit from './Components/AddFruit/AddFruit';
 import MyItems from './Components/MyItems/MyItems';
 import ManageItems from './Components/ManageItems/ManageItems';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/addfruit' element={<RequireAuth> <AddFruit /> </RequireAuth>}></Route>
         <Route path='/myitems' element={<RequireAuth> <MyItems /> </RequireAuth>}></Route>
         <Route path='/manageitems' element={<RequireAuth> <ManageItems /> </RequireAuth>}></Route>
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer></Footer>
     </div>
