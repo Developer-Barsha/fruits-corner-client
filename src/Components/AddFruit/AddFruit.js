@@ -1,9 +1,35 @@
 import React from 'react';
+import auth from '../../firebase.init'
+import {useAuthState} from 'react-firebase-hooks/auth'
 
 const AddFruit = () => {
+    const [user] = useAuthState(auth);
+
+    const handleAddFruit=e=>{
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = user.email;
+        const image = e.target.image.value;
+        const supplier = e.target.supplier.value;
+        const price = e.target.price.value;
+        const quantity = e.target.quantity.value;
+        const description = e.target.description.value;
+
+        const fruit = {name, email, image, supplier, price, quantity, description};
+        console.log(fruit);
+        fetch('http://localhost:5000/fruits', {
+            method:'POST',
+            headers:{'content-type':'application/json'},
+            body: JSON.stringify(fruit)
+        })
+        .then(res=>res.json())
+        .then(data=>console.log(data))
+        e.target.reset();
+    }
+
     return (
         <div className='form-container pb-3'>
-            <form className=''>
+            <form onSubmit={handleAddFruit}>
                 <h3 className='pb-1'>Add A New Item</h3>
                 <div className='w-100 d-flex gap-2'>
                     <input type="text" name="name" placeholder='Fruit Name' required />

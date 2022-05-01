@@ -5,7 +5,7 @@ import './Fruits.css'
 const Fruits = () => {
     const [fruits, setFruits] = useState([]);
     useEffect(()=>{
-        fetch('https://infinite-lowlands-70374.herokuapp.com/fruits')
+        fetch('http://localhost:5000/allfruits')
         .then(res=>res.json())
         .then(data=>setFruits(data));
     } ,[]);
@@ -13,7 +13,7 @@ const Fruits = () => {
     return (
         <div className='fruits'>
             {
-                fruits.map(fruit=><Fruit fruit={fruit} key={fruit._id} />)
+                (fruits.slice(0,6)).map(fruit=><Fruit fruit={fruit} key={fruit._id} />)
             }
         </div>
     );

@@ -1,22 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import auth from '../../../firebase.init';
 import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import auth from '../../../firebase.init';
 
 
 const Register = () => {
     const [createUserWithEmailAndPassword, , loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const navigate = useNavigate();
     const [user] = useAuthState(auth);
-
-    // useEffect(() => {
-    //     if (user) {
-    //         navigate('/')
-    //     }
-    // }, [])
 
     const handleRegister = async e => {
         e.preventDefault();
