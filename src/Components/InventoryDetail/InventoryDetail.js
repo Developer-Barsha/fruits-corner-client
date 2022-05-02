@@ -12,7 +12,7 @@ const InventoryDetail = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5000/allfruits/' + id)
+        fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits/' + id)
             .then(res => res.json())
             .then(data => setFruit(data));
     }, []);
@@ -29,7 +29,7 @@ const InventoryDetail = () => {
 
         const updatedFruit = { name, email, image, supplier, price, quantity, description };
         setFruit(updatedFruit);
-        fetch('http://localhost:5000/allfruits/' + id, {
+        fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits/' + id, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(updatedFruit)
@@ -51,7 +51,7 @@ const InventoryDetail = () => {
         const updatedFruit = { name, email, image, supplier, price, quantity, description };
         setFruit(updatedFruit);
 
-        fetch('http://localhost:5000/allfruits/' + id, {
+        fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits/' + id, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(updatedFruit)

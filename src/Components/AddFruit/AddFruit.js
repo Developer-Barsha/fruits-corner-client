@@ -18,7 +18,7 @@ const AddFruit = () => {
 
         const fruit = {name, email, image, supplier, price, quantity, description};
         console.log(fruit);
-        fetch('http://localhost:5000/allfruits', {
+        fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits', {
             method:'POST',
             headers:{'content-type':'application/json'},
             body: JSON.stringify(fruit)

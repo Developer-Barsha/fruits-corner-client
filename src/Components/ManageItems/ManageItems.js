@@ -12,7 +12,7 @@ const ManageItems = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5000/allfruits')
+        fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits')
             .then(res => res.json())
             .then(data => setFruits(data));
     }, []);
@@ -21,7 +21,7 @@ const ManageItems = () => {
         const response = window.confirm('Are you sure?');
         
         if(response===true){
-            fetch('http://localhost:5000/allfruits/'+id, {
+            fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits/'+id, {
                 method:'DELETE'
             })
             .then(res => res.json())

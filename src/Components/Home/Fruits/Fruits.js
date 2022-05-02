@@ -9,7 +9,7 @@ const Fruits = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5000/allfruits')
+        fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits')
             .then(res => res.json())
             .then(data => setFruits(data));
     }, []);

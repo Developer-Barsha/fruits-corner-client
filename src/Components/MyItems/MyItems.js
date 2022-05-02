@@ -9,7 +9,7 @@ const MyItems = () => {
     const [user] = useAuthState(auth);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/userfruits?email=${user?.email}`)
+        fetch(`https://infinite-lowlands-70374.herokuapp.com/userfruits?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setFruits(data));
     }, []);
@@ -20,7 +20,7 @@ const MyItems = () => {
         const response = window.confirm('Are you sure?');
         
         if(response===true){
-            fetch('http://localhost:5000/allfruits/'+id, {
+            fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits/'+id, {
                 method:'DELETE'
             })
             .then(res => res.json())
