@@ -36,9 +36,30 @@
     padding: 8px 15px;
     border: 0;
     color: white;
+    border-radius: 5px;
 }
 
 .fruit button:hover{
     background-color: #ffbc3e;
     transition: 0.5s;
+}
+
+.fruit .my-items-delte-btn{
+    background-color: #ff5858;
+    color: white;
+    padding: 5px;
+}
+
+.fruit .my-items-delte-btn{
+    background-color: #ff5858;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 5px 15px;
+}
+
+.fruit .my-items-delte-btn:hover{
+    background-color: #f89292;
 }

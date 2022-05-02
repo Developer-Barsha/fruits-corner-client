@@ -1,11 +1,10 @@
-import { ArrowRightIcon } from '@heroicons/react/solid';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import './Fruit.css'
 
-const Fruit = ({ fruit }) => {
-    const { _id, name, image, description, quantity, price, supplier } = fruit;
-    const navigate = useNavigate();
+const Fruit = ({ fruit, button }) => {
+    const { name, image, description, quantity, price, supplier } = fruit;
+    // const navigate = useNavigate();
 
     return (
         <div className='fruit'>
@@ -17,7 +16,7 @@ const Fruit = ({ fruit }) => {
             </div>
             <p className='fruit-info mb-0 pb-1'> <span>Supplier </span> : {supplier}</p>
             <p>{description}</p>
-            <button onClick={() => navigate(`/inventory/${_id}`)}>Manage <ArrowRightIcon style={{width:'20px'}}/> </button>
+            {button}
         </div>
     );
 };

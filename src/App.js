@@ -11,6 +11,7 @@ import AddFruit from './Components/AddFruit/AddFruit';
 import MyItems from './Components/MyItems/MyItems';
 import ManageItems from './Components/ManageItems/ManageItems';
 import NotFound from './Components/NotFound/NotFound';
+import Blogs from './Components/Blogs/Blogs';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
+        <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/inventory/:id' element={<RequireAuth> <InventoryDetail /> </RequireAuth>}></Route>

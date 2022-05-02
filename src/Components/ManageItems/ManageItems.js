@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
+// import { useAuthState } from 'react-firebase-hooks/auth';
 import Table from 'react-bootstrap/Table'
-import auth from '../../firebase.init';
+// import auth from '../../firebase.init';
 import { TrashIcon } from '@heroicons/react/solid'
 import './Manageitems.css'
+import { useNavigate } from 'react-router-dom';
 
 const ManageItems = () => {
     const [fruits, setFruits] = useState([]);
-    const [user] = useAuthState(auth);
+    // const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('http://localhost:5000/allfruits')
@@ -16,13 +18,17 @@ const ManageItems = () => {
     }, []);
 
     const handleDelete=id=>{
-        fetch('http://localhost:5000/allfruits/'+id, {
-            method:'DELETE'
-        })
-        .then(res => res.json())
-        .then(data => console.log(data));
-        const rest = fruits.filter(fruit=>fruit._id!==id);
-        setFruits(rest);
+        const response = window.confirm('Are you sure?');
+        
+        if(response===true){
+            fetch('http://localhost:5000/allfruits/'+id, {
+                method:'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => console.log(data));
+            const rest = fruits.filter(fruit=>fruit._id!==id);
+            setFruits(rest);
+        }
     }
 
     return (
@@ -54,6 +60,7 @@ const ManageItems = () => {
                     </tbody>
                 </Table>
             </div>
+                <button onClick={() => navigate('/additem')} className='manage-btn me-0'>Add new item</button>
         </section>
     );
 };
