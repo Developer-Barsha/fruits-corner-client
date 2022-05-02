@@ -1,6 +1,7 @@
 import React from 'react';
 import auth from '../../firebase.init'
 import {useAuthState} from 'react-firebase-hooks/auth'
+import { toast, ToastContainer } from 'react-toastify';
 
 const AddFruit = () => {
     const [user] = useAuthState(auth);
@@ -25,10 +26,12 @@ const AddFruit = () => {
         .then(res=>res.json())
         .then(data=>console.log(data))
         e.target.reset();
+        toast("Congrats!! Your Item's Added")
     }
 
     return (
         <div className='form-container pb-3'>
+            <ToastContainer/>
             <form onSubmit={handleAddFruit}>
                 <h3 className='pb-1'>Add A New Item</h3>
                 <div className='w-100 d-flex gap-2'>

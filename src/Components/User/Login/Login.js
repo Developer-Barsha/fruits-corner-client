@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
@@ -11,17 +11,17 @@ const Login = () => {
     const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location?.state?.from?.pathName || '/';
+    let from = location.state?.from?.pathname || "/";
     const emailRef = useRef('');
-    
-    if (user) {
-        return navigate(from, { replace: true });
+    if(user){
+        navigate(from, { replace: true });
     }
+
     const handleLogin = async e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-
+        
         if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email) === false) {
             return toast('Invalid Email')
         }
@@ -34,10 +34,12 @@ const Login = () => {
         if (loading) {
             return toast('Loading...')
         }
+        
         await signInWithEmailAndPassword(email, password);
+
     }
 
-    const sendResetEmail = async ()=>{
+    const sendResetEmail = async () => {
         console.log(emailRef.current.value);
         if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(emailRef.current.value) === false) {
             return toast('Invalid Email')
@@ -47,8 +49,8 @@ const Login = () => {
         }
         else if (resetError) {
             return toast(resetError?.message);
-        } 
-        else{
+        }
+        else {
             await sendPasswordResetEmail(emailRef.current.value)
             toast('Reset Email Sent')
         }
@@ -64,7 +66,7 @@ const Login = () => {
                 <input type="submit" value="Login" />
             </form>
             <p>Don't have Account? <Link to='/register' style={{ color: "#8259ff" }}>Register Here</Link></p>
-            <p>Forgot Password? <button onClick={sendResetEmail} style={{ color: "#8259ff" }}>Reset Password</button></p>
+            <p>Forgot Password? <button onClick={sendResetEmail} className='reset-btn'>Reset Password</button></p>
             <SocialLogin></SocialLogin>
         </div>
     );
