@@ -9,6 +9,6 @@
     },
     {
         "question":"When should to use node js and when to use mongodb?",
-        "answer":"Javascript is a client-side scripting language whereas Nodejs is a server-side scripting language. Javascript runs on the browser but Nodejs helps javascript to run outside of the browser. Javascript is capable to use HTML and play with dom but nodejs isn't capable to use any HTML tags."
+        "answer":"Nodejs is used when we are workig on server side and need to run javascript outside of the browser. And mongodb is used when we are working with a small application and need to store data in key-pair value/graph/"
     }
 ]
