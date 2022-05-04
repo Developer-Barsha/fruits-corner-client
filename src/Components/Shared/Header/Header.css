@@ -31,7 +31,7 @@ nav {
 }
 
 .signOut-btn{
-    background-color: #ffbc3e;
+    background: linear-gradient(#fbd48a, #ffbc3e);
     padding: 5px 12px;
     border: 0;
 }

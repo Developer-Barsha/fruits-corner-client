@@ -32,19 +32,21 @@
 }
 
 .chart:nth-child(1){
-    background-color: #ffbc3e;
     /* background-color: #ff3ebc; */
     background-size: 200px;
+    background: linear-gradient(#ffd78e, #ffbc3e);
 }
 
 .chart:nth-child(2){
     background-color: #ff5858;
     background-size: 200px;
+    background: linear-gradient(#fa9393, #ff5858);
 }
 
 .chart:nth-child(3){
     background-color: #8259ff;
     background-size: 200px;
+    background: linear-gradient(#b198fc, #8259ff);
 }
 
 @media only screen and (min-width:600px) and (max-width:1000px) {

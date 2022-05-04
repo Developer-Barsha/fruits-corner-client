@@ -1,4 +1,4 @@
-.fruit{
+.fruit {
     width: 320px;
     height: 490px;
     border: 1px solid #555;
@@ -8,50 +8,51 @@
     position: relative;
 }
 
-.fruit img{
+.fruit img {
     width: 120px;
     margin-right: 10px;
 }
 
-.fruit div{
+.fruit div {
     display: flex;
     gap: 30%;
     line-height: 0;
     padding: 6px 0 2px 0;
 }
 
-.fruit-name{
+.fruit-name {
     color: #ffbc3e;
 }
 
-.fruit-info>span{
+.fruit-info>span {
     color: #8259ff;
 }
 
-.fruit button{
+.fruit button {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    background-color: #8259ff;
+    background: linear-gradient(#a88ff4, #8259ff);
     padding: 8px 15px;
     border: 0;
     color: white;
     border-radius: 5px;
 }
 
-.fruit button:hover{
-    background-color: #ffbc3e;
+.fruit button:hover {
+    background: linear-gradient(#fbd48a, #ffbc3e);
     transition: 0.5s;
 }
 
-.fruit .my-items-delte-btn{
+.fruit .my-items-delte-btn {
     background-color: #ff5858;
     color: white;
     padding: 5px;
 }
 
-.fruit .my-items-delte-btn{
-    background-color: #ff5858;
+.fruit .my-items-delte-btn {
+    background-color: #ff5858;    
+    background: linear-gradient(#f69898 ,#ff5858);
     color: white;
     display: flex;
     align-items: center;
@@ -60,6 +61,7 @@
     padding: 5px 15px;
 }
 
-.fruit .my-items-delte-btn:hover{
+.fruit .my-items-delte-btn:hover {
     background-color: #f89292;
+    
 }

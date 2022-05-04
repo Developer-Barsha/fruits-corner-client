@@ -32,13 +32,14 @@ form input:not([type='submit']):focus, form textarea:focus{
 form input[type='submit']{
     width: 100%;
     font-size: 17px;
-    background-color: #ffbc3e;
+    background: linear-gradient(#fbd48a, #ffbc3e);
     border: 0;
     padding: 5px;
+    border-radius: 5px;
 }
 
 form input[type='submit']:hover{
-    background-color: #ffd972;
+    background: linear-gradient(#ffe6b9, #fdcf79);
     transition: 0.5s;
 }
 

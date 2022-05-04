@@ -4,7 +4,7 @@
 }
 
 .item-btn{
-    background-color: #ffbc3e;
+    background: linear-gradient(#f6d28e ,#ffbc3e);
     padding: 5px 20px;
     border: 0;
     color: white;

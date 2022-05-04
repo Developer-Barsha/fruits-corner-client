@@ -7,6 +7,7 @@
 
 .socialLogin button{
     background-color: #8259ff;
+    background: linear-gradient(#a88ef6, #8259ff);
     padding: 8px 15px;
     display: flex;
     gap: 10px;
@@ -18,8 +19,7 @@
 }
 
 .socialLogin button:hover{
-    background-color: #9e82f0;
-    transition: 0.5s;
+    background: linear-gradient(#c6b3ff, #936fff);
 }
 
 .socialLogin button img{

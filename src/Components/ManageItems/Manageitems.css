@@ -16,7 +16,7 @@
     justify-content: center;
     margin: auto;
     border-radius: 50%;
-    background-color: #ff5858;
+    background: linear-gradient(#f69898 ,#ff5858);
     color: white;
     border: 0;
 }
