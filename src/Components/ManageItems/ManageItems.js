@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-// import { useAuthState } from 'react-firebase-hooks/auth';
 import Table from 'react-bootstrap/Table'
-// import auth from '../../firebase.init';
 import { TrashIcon } from '@heroicons/react/solid'
 import './Manageitems.css'
 import { useNavigate } from 'react-router-dom';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import auth from '../../firebase.init';
 
 const ManageItems = () => {
     const [fruits, setFruits] = useState([]);
@@ -60,7 +60,7 @@ const ManageItems = () => {
                     </tbody>
                 </Table>
             </div>
-                <button onClick={() => navigate('/additem')} className='manage-btn me-0'>Add new item</button>
+                <button onClick={() => navigate('/addfruit')} className='manage-btn me-0'>Add new item</button>
         </section>
     );
 };

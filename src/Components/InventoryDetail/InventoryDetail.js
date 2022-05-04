@@ -64,7 +64,7 @@ const InventoryDetail = () => {
     return (
         <section className='d-flex inventory-detail px-4 py-5'>
             <div className='px-3 py-auto inventoryDeatail-part d-flex flex-column justify-content-center gap-2' style={{ border: '1px solid #ffbc3e', padding: '10px auto' }}>
-                <div className='d-flex align-items-center'>
+                <div className='d-flex basic-info'>
                     <img src={image} alt="" className='d-flex mx-auto' width={200} />
                     <div>
                         <h1 className='fruit-name'>{name}</h1>
@@ -85,7 +85,7 @@ const InventoryDetail = () => {
                     <h3>Restock The Item</h3>
                     <div className='w-100 d-flex gap-2'>
                         <input type="text" name="name" placeholder={fruit?.name} />
-                        <input type="text" name="supplier" placeholder='Fruit Supplier' />
+                        <input type="text" name="supplier" placeholder='Supplier' />
                     </div>
                     <div className='w-100 d-flex gap-2'>
                         <input type="number" name="price" placeholder={'Price'} />

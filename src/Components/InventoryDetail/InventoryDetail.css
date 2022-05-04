@@ -26,7 +26,11 @@
     }
 
     .inventoryDeatail-part {
-        width: 90%;
+        width: 95%;
+    }
+
+    .basic-info{
+        flex-direction: column;
     }
 
     .quantity-price {
