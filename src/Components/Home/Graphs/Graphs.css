@@ -1,4 +1,4 @@
-.charts{
+.charts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -7,14 +7,25 @@
     padding: 20px 70px;
 }
 
-.chart{
-    min-height: 50px;
+.charts-container h1{
+    padding-left: 70px;
+    padding-top: 30px;
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+
+.chart {
     padding: 20px;
     color: white;
     border-radius: 20px;
 }
 
-.chart button{
+.chart:hover {
+    box-shadow: 2px 2px 20px #999;
+    transition: 0.5s;
+}
+
+.chart button {
     background-color: rgba(255, 255, 255, 0);
     border: 2px solid #fff;
     color: white;
@@ -26,39 +37,39 @@
     border-radius: 8px;
 }
 
-.chart button:hover{
+.chart button:hover {
     transition: 0.5s;
     box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.679);
 }
 
-.chart:nth-child(1){
+.chart:nth-child(1) {
     /* background-color: #ff3ebc; */
-    background-size: 200px;
     background: linear-gradient(#ffd78e, #ffbc3e);
 }
 
-.chart:nth-child(2){
-    background-color: #ff5858;
-    background-size: 200px;
+.chart:nth-child(2) {
     background: linear-gradient(#fa9393, #ff5858);
 }
 
-.chart:nth-child(3){
-    background-color: #8259ff;
-    background-size: 200px;
+.chart:nth-child(3) {
     background: linear-gradient(#b198fc, #8259ff);
 }
 
 @media only screen and (min-width:600px) and (max-width:1000px) {
-    .charts{
+    .charts {
         grid-template-columns: repeat(2, 1fr);
         padding: 20px 30px;
-    }    
+    }
 }
 
-@media only screen and (max-width:599px){
-    .charts{
+@media only screen and (max-width:599px) {
+    .charts {
         grid-template-columns: repeat(1, 1fr);
         padding: 20px;
-    }    
+    }
+
+    .charts-container h1{
+        padding-left: 20px;
+    }
+    
 }

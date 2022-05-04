@@ -30,23 +30,26 @@ const Graphs = () => {
     // const color = colors[Math.floor(Math.random() * colors.length)];
 
     return (
-        <div className='charts'>
-            <div className="chart">
-                <h2>{totalItems}</h2>
-                <p>The amount of different items</p>
-                <button>See all <ArrowRightIcon style={{width:'20px'}}/></button>
+        <section className='charts-container'>
+            <h1>Overview</h1>
+            <div className='charts'>
+                <div className="chart">
+                    <h2>{totalItems}</h2>
+                    <p>The amount of different items</p>
+                    <button>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
+                </div>
+                <div className="chart">
+                    <h2>{totalSuppliers.length}</h2>
+                    <p>The amount of total suppliers</p>
+                    <button>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
+                </div>
+                <div className="chart">
+                    <h2>{totalQuantity}</h2>
+                    <p>Total quantity of all items</p>
+                    <button>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
+                </div>
             </div>
-            <div className="chart">
-                <h2>{totalSuppliers.length}</h2>
-                <p>The amount of total suppliers</p>
-                <button>See all <ArrowRightIcon style={{width:'20px'}}/></button>
-            </div>
-            <div className="chart">
-                <h2>{totalQuantity}</h2>
-                <p>Total quantity of all items</p>
-                <button>See all <ArrowRightIcon style={{width:'20px'}}/></button>
-            </div>
-        </div>
+        </section>
     );
 };
 

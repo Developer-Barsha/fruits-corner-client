@@ -16,19 +16,18 @@ const Footer = () => {
                         <ul>
                             <li>About Us</li>
                             <li>Services</li>
-                            <li>Contact Us</li>
-                            <li>Contact Us</li>
+                            <li>Products</li>
                             <li>Contact Us</li>
                         </ul>
                     </div>
 
                     <div>
-                        <h2 className='footer-title'>Social</h2>
+                        <h2 className='footer-title'>Contact</h2>
                         <ul>
-                            <li> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSHnjhohZvjxf19zHrR8UKszTq5mIfH9YJQ&usqp=CAU" alt="" /> Facebook</li>
-                            <li> <img src="https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/article_images/2018/05/05/file6zcmsgmbeah12366y3nb.jpg?itok=i6JYWNQC" alt="" /> Twitter</li>
-                            <li> <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" alt="" /> LinkedIn</li>
-                            <li> <img src="https://internationalipohfashionweek.files.wordpress.com/2018/02/instagram-colourful-icon.png?w=466" alt="" /> instragram</li>
+                            <li>2307 Sadar, Narsingdi</li>
+                            <li>Bangladesh</li>
+                            <li>+ (880) 9876543219</li>
+                            <li>fruitscorner@gmail.com</li>
                         </ul>
                     </div>
                 </div>

@@ -1,11 +1,16 @@
 .fruit {
     width: 320px;
     height: 490px;
-    border: 1px solid #555;
+    border: 1px solid #999;
     padding: 10px;
     margin: 0 auto;
     border-radius: 15px;
     position: relative;
+}
+
+.fruit:hover {
+    box-shadow: 2px 2px 20px #999;
+    transition: 0.5s;
 }
 
 .fruit img {
