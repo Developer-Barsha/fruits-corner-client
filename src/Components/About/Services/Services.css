@@ -1,0 +1,81 @@
+.services{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 120px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.service h1{
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    color: white;
+    background: linear-gradient(#a387f6, #8259ff);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    margin: 10px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service{
+    background: white;
+    border-bottom: 8px solid #8259ff;
+    box-shadow: 5px 5px 20px #999;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.service:hover{
+    background: linear-gradient(#a387f6, #8259ff);
+    color: white;
+    border-bottom: 8px solid #fff;
+    transition: 0.6s;
+}
+
+.service:hover::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: -30px;
+    right: -30px;
+    background: white;
+    transition: 0.6s;
+}
+
+.service:hover h3{
+    color: #ffbc3e;
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+.service:hover h1{
+    color: #8259ff;
+    background: white;
+    transition: 0.6s;
+}
+
+@media only screen and (min-width:501px) and (max-width:800px) {
+    .services{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 20px;
+    }      
+}
+
+@media only screen and (max-width:500px) {
+    .services{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 50px 30px;
+    }    
+}

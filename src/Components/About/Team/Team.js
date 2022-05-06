@@ -33,7 +33,7 @@ const Team = () => {
                                 <a href="/"><i className="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>) :
-                    <LoadingSpinner />
+                    <LoadingSpinner/>
                 }
             </div>
         </section>
