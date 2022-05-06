@@ -4,6 +4,7 @@ import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import auth from '../../../firebase.init';
 import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
+// import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner'
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -13,22 +14,26 @@ const Register = () => {
     // const [user] = useAuthState(auth);
     const location = useLocation();
     const from = location?.state?.from?.pathName || '/';
-
-    if (user) {
-        return navigate(from, { replace: true });
+    
+    if(error){
+        return toast(error?.message);
     }
-
+    
+    // handle register with email and password
     const handleRegister = async e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
+        await createUserWithEmailAndPassword(email, password);
         if(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email) === false){
             return toast('Invalid Email')
         }
         if(password.length <6){
             return toast('Password too short')
         }
-        await createUserWithEmailAndPassword(email, password);
+        if (user) {
+            return navigate(from, { replace: true });
+        }
     }
 
     return (

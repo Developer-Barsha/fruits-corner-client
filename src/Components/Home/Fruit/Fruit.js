@@ -2,6 +2,7 @@ import React from 'react';
 import './Fruit.css'
 
 const Fruit = ({ fruit, button }) => {
+    // destructuring fruit
     const { name, image, description, quantity, price, supplier } = fruit;
 
     return (

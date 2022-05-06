@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 const AddFruit = () => {
     const [user] = useAuthState(auth);
 
+    // handle add fruit
     const handleAddFruit=e=>{
         e.preventDefault();
         const name = e.target.name.value;
@@ -34,14 +35,20 @@ const AddFruit = () => {
             <ToastContainer/>
             <form onSubmit={handleAddFruit}>
                 <h3 className='pb-1'>Add A New Item</h3>
+
+                {/* getting name and supplier */}
                 <div className='w-100 d-flex gap-2'>
                     <input type="text" name="name" placeholder='Fruit Name' required />
                     <input type="text" name="supplier" placeholder='Fruit Supplier' required />
                 </div>
+
+                {/* getting price and quantity */}
                 <div className='w-100 d-flex gap-2'>
                     <input type="number" name="price" placeholder='Fruit Price' required />
                     <input type="number" name="quantity" placeholder='Fruit Quantity' required />
                 </div>
+                
+                {/* getting image link and description */}
                 <input type="text" name="image" placeholder='Fruit Image Link' required />
                 <textarea className='w-100 p-2 rounded-sm' maxLength={120} rows={3} style={{ resize: 'none' }} type="text" name="description" placeholder='Fruit Description' required />
                 <input type="submit" value="Add Item" />

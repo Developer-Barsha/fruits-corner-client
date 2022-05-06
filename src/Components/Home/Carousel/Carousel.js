@@ -7,8 +7,8 @@ import carousel3 from '../../../images/Strawberries.png'
 const Carousels = () => {
     return (
         <div>
-            
             <Carousel fade>
+                {/* Carousel Item 1 */}
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
@@ -20,6 +20,8 @@ const Carousels = () => {
                         <p>Fruits are an important part of a healthy eating pattern.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
+
+                {/* Carousel Item 2 */}
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
@@ -32,6 +34,8 @@ const Carousels = () => {
                         <p>Natural Fruits help lower blood pressure, and flavonoids.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
+
+                {/* Carousel Item 3 */}
                 <Carousel.Item>
                     <img
                         className="d-block w-100"

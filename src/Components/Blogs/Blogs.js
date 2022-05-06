@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './Blogs.css'
 
 const Blogs = () => {
+    // getting blogs
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://infinite-lowlands-70374.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])

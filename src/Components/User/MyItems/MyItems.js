@@ -16,23 +16,23 @@ const MyItems = () => {
         const getItems = async () => {
             const email = user?.email;
             try{
-                const { data } = await axiosPrivate.get(`http://localhost:5000/userfruits?email=${email}`);
+                const { data } = await axiosPrivate.get(`https://infinite-lowlands-70374.herokuapp.com/userfruits?email=${email}`);
                 setFruits(data);
             }
             catch(error){
                 console.log(error.message);
                 if(error.response.status===401){
                     signOut(auth);
-                    navigate('/login')
+                    navigate('/login');
                 }
                 if(error.response.status===403){
                     signOut(auth);
-                    navigate('/login')
+                    navigate('/login');
                 }
             }
         }
         getItems();
-    }, [user])
+    }, [user]);
 
     const button = id => <button className='my-items-delte-btn' onClick={() => handleDelete(id)}>Delete<TrashIcon style={{ width: '20px' }} /></button>;
 
@@ -52,8 +52,11 @@ const MyItems = () => {
 
     return (
         <div className='fruits mx-auto'>
-            { !fruits.length===0 ?
-                fruits.map(fruit => <Fruit fruit={fruit} button={button(fruit._id)} key={fruit._id} />) :
+            { 
+                fruits.map(fruit => <Fruit fruit={fruit} button={button(fruit._id)} key={fruit._id} />) 
+            }
+            {
+                fruits.length===0 &&
                 <div className='d-flex flex-column justify-content-center align-items-center' style={{minHeight:'100px'}}>
                     <img src="https://img.freepik.com/free-vector/no-data-concept-illustration_203587-28.jpg?w=2000" className='w-100 mx-auto' alt="" />
                     <h3 className='text-warning mx-auto'>No items added</h3>

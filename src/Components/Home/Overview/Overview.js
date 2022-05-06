@@ -1,8 +1,12 @@
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Overview.css'
 
 const Overview = () => {
+    const navigate = useNavigate();
+    
+    // getting all fruit items
     const [items, setItems] = useState([]);
     useEffect(() => {
         fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits')
@@ -10,8 +14,10 @@ const Overview = () => {
             .then(data => setItems(data));
     }, []);
 
+    // getting total items amount
     let totalItems = items.length;
 
+    // getting total supplier amount
     let suppliers = items.map(item => item.supplier);
     let totalSuppliers = [];
     for (const supplier of suppliers) {
@@ -20,6 +26,7 @@ const Overview = () => {
         }
     }
 
+    // getting total quantity of all items
     let totalQuantity = 0;
     const quantities = items.map(item => item.quantity);
     for (const quantity of quantities) {
@@ -33,17 +40,17 @@ const Overview = () => {
                 <div className="chart">
                     <h2>{totalItems}</h2>
                     <p>The amount of different items</p>
-                    <button>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
+                    <button onClick={()=>navigate('/manageinventory')}>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
                 </div>
                 <div className="chart">
                     <h2>{totalSuppliers.length}</h2>
                     <p>The amount of total suppliers</p>
-                    <button>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
+                    <button onClick={()=>navigate('/manageinventory')}>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
                 </div>
                 <div className="chart">
                     <h2>{totalQuantity}</h2>
                     <p>Total quantity of all items</p>
-                    <button>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
+                    <button onClick={()=>navigate('/manageinventory')}>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
                 </div>
             </div>
         </section>

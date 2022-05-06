@@ -17,7 +17,8 @@ import About from './Components/About/About';
 function App() {
   return (
     <div>
-    <Header></Header>
+      <Header></Header>
+
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
@@ -28,9 +29,10 @@ function App() {
         <Route path='/inventory/:id' element={<RequireAuth> <InventoryDetail /> </RequireAuth>}></Route>
         <Route path='/addfruit' element={<RequireAuth> <AddFruit /> </RequireAuth>}></Route>
         <Route path='/myitems' element={<RequireAuth> <MyItems /> </RequireAuth>}></Route>
-        <Route path='/manageitems' element={<RequireAuth> <ManageItems /> </RequireAuth>}></Route>
+        <Route path='/manageinventory' element={<RequireAuth> <ManageItems /> </RequireAuth>}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
+
       <Footer></Footer>
     </div>
   );

@@ -6,15 +6,15 @@
 }
 
 .blog{
-    background-color: #fffbf2;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 0 10px 10px 0;
     box-shadow: 2px 2px 20px #999;
     margin-bottom: 10px;
 }
 
 .blog:hover{
-    border: 1px solid #8259ff;
+    background-color: #fffbf2;
+    border-left: 3px solid #8259ff;
     box-shadow: 2px 2px 20px #777;
     transition: 0.5s;
     transform: scale(0.99);

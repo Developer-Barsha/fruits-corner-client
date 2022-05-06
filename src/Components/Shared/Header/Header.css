@@ -31,9 +31,10 @@ nav {
 }
 
 .signOut-btn{
-    background: linear-gradient(#fbd48a, #ffbc3e);
+    background: linear-gradient(#af98f6, #8259ff);
     padding: 5px 12px;
     border: 0;
+    color:white;
 }
 
 @media only screen and (max-width:850px){

@@ -16,7 +16,9 @@ const Features = () => {
                         <p>You will find the fruits 100% healthy. We try our best to provide best fruits.</p>
                     </div>
                 </div>
+                
                 <img src='https://pics.clipartpng.com/Basket_with_Fruits_PNG_Clipart-210.png' alt="" />
+
                 <div>
                     <div>
                         <h4>Fresh Fruit</h4>

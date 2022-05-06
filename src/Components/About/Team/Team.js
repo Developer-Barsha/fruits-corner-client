@@ -3,9 +3,10 @@ import LoadingSpinner from './../../Shared/LoadingSpinner/LoadingSpinner'
 import './Team.css'
 
 const Team = () => {
+    // getting team members
     const [members, setMembers] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/team')
+        fetch('https://infinite-lowlands-70374.herokuapp.com/team')
         .then(res=>res.json())
         .then(data=>setMembers(data))
     }, [])

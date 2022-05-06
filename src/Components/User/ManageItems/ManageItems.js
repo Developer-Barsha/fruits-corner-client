@@ -5,25 +5,27 @@ import { useNavigate } from 'react-router-dom';
 import './Manageitems.css';
 
 const ManageItems = () => {
-    const [fruits, setFruits] = useState([]);
     const navigate = useNavigate();
 
+    // getting all fruits
+    const [fruits, setFruits] = useState([]);
     useEffect(() => {
         fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits')
             .then(res => res.json())
             .then(data => setFruits(data));
     }, []);
 
-    const handleDelete=id=>{
+    // handling delete onclick delete button
+    const handleDelete = id => {
         const response = window.confirm('Are you sure?');
-        
-        if(response===true){
-            fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits/'+id, {
-                method:'DELETE'
+
+        if (response === true) {
+            fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits/' + id, {
+                method: 'DELETE'
             })
-            .then(res => res.json())
-            .then(data => console.log(data));
-            const rest = fruits.filter(fruit=>fruit._id!==id);
+                .then(res => res.json())
+                .then(data => console.log(data));
+            const rest = fruits.filter(fruit => fruit._id !== id);
             setFruits(rest);
         }
     }
@@ -42,6 +44,7 @@ const ManageItems = () => {
                             <th>Action</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         {
                             fruits.map(fruit =>
@@ -50,14 +53,14 @@ const ManageItems = () => {
                                     <td>{fruit.price}</td>
                                     <td>{fruit.quantity}</td>
                                     <td>{fruit.supplier}</td>
-                                    <td><button onClick={()=>handleDelete(fruit._id)} className='delete-btn'><TrashIcon style={{width:'17px'}}/></button></td>
+                                    <td><button onClick={() => handleDelete(fruit._id)} className='delete-btn'><TrashIcon style={{ width: '17px' }} /></button></td>
                                 </tr>
                             )
                         }
                     </tbody>
                 </Table>
             </div>
-                <button onClick={() => navigate('/addfruit')} className='manage-btn me-0'>Add new item</button>
+            <button onClick={() => navigate('/addfruit')} className='manage-btn me-0'>Add new item</button>
         </section>
     );
 };

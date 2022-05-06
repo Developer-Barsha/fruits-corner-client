@@ -2,7 +2,7 @@ import React from 'react';
 import Overview from '../Overview/Overview';
 import Carousels from '../Carousel/Carousel';
 import Fruits from '../Fruits/Fruits';
-import Features from '../Features/Features';
+import Featured from '../Featured/Featured';
 
 const Home = () => {
     return (
@@ -10,7 +10,7 @@ const Home = () => {
             <Carousels />
             <Overview></Overview>
             <Fruits></Fruits>
-            <Features></Features>
+            <Featured></Featured>
         </div>
     );
 };
