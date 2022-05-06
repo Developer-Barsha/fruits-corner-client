@@ -1,5 +1,5 @@
 import React from 'react';
-import auth from '../../firebase.init'
+import auth from '../../../firebase.init'
 import {useAuthState} from 'react-firebase-hooks/auth'
 import { toast, ToastContainer } from 'react-toastify';
 
@@ -39,8 +39,8 @@ const AddFruit = () => {
                     <input type="text" name="supplier" placeholder='Fruit Supplier' required />
                 </div>
                 <div className='w-100 d-flex gap-2'>
-                    <input type="text" name="price" placeholder='Fruit Price' required />
-                    <input type="text" name="quantity" placeholder='Fruit Quantity' required />
+                    <input type="number" name="price" placeholder='Fruit Price' required />
+                    <input type="number" name="quantity" placeholder='Fruit Quantity' required />
                 </div>
                 <input type="text" name="image" placeholder='Fruit Image Link' required />
                 <textarea className='w-100 p-2 rounded-sm' maxLength={120} rows={3} style={{ resize: 'none' }} type="text" name="description" placeholder='Fruit Description' required />

@@ -1,3 +1,7 @@
+.manage-items{
+    padding: 10px 30px;
+}
+
 .table{
     color: #ffbc3e;
     border: 1px solid #ffbc3e;
@@ -23,4 +27,14 @@
 .delete-btn:hover{
     background-color: #ec9687;
     border: 0;
+}
+
+@media only screen and (max-width:700px) {
+    .table{
+        font-size: 0.8rem;
+    } 
+    
+    .manage-items{
+        padding: 10px;
+    }
 }

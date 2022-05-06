@@ -1,5 +1,4 @@
 import React from 'react';
-// import placeholder from '../../../images/placeholder.png'
 import './Fruit.css'
 
 const Fruit = ({ fruit, button }) => {

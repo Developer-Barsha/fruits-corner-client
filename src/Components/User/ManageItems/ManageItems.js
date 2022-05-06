@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table'
 import { TrashIcon } from '@heroicons/react/solid'
-import './Manageitems.css'
 import { useNavigate } from 'react-router-dom';
-// import { useAuthState } from 'react-firebase-hooks/auth';
-// import auth from '../../firebase.init';
+import './Manageitems.css';
 
 const ManageItems = () => {
     const [fruits, setFruits] = useState([]);
-    // const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -32,7 +29,7 @@ const ManageItems = () => {
     }
 
     return (
-        <section className='p-5'>
+        <section className='manage-items'>
             <h2 className='text-center pb-3'>Manage Inventories</h2>
             <div>
                 <Table striped bordered hover className='table'>

@@ -4,12 +4,16 @@
     align-items: center;
     padding: 10px 50px;
     gap: 30px;
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: #fffbf2;
 }
 
 .banner>div{
     width: 50%;
+}
+
+.banner .about-img{
+    width:50%;
 }
 
 .banner>div>img{
@@ -24,6 +28,20 @@
     align-items: center;
 }
 
+.banner button{
+    width: 150px;
+    border: 0;
+    padding: 5px;
+    background: linear-gradient(#fada9d,#ffbc3e);
+    border-radius: 5px;
+    color: white;
+}
+
+.banner button:hover{
+    background: linear-gradient(#af95ff,#8259ff);
+    transition: 0.5s;
+}
+
 @media only screen and (max-width:700px){
     .banner{
         flex-direction: column;
@@ -31,14 +49,16 @@
         gap: 20px;
     }
 
+    .banner .about-img{
+        width:100%;
+    }
+
     .banner>div:nth-child(2){
-        order: 1;
         width: 100%;       
         justify-content: center;
     }
 
     .banner>div:nth-child(1){
-        order: 2; 
         width: 100%;        
     }
 }

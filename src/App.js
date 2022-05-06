@@ -6,10 +6,10 @@ import Footer from './Components/Shared/Footer/Footer';
 import Login from './Components/User/Login/Login';
 import Register from './Components/User/Register/Register';
 import RequireAuth from './Components/Shared/RequireAuth/RequireAuth';
-import InventoryDetail from './Components/InventoryDetail/InventoryDetail';
-import AddFruit from './Components/AddFruit/AddFruit';
-import MyItems from './Components/MyItems/MyItems';
-import ManageItems from './Components/ManageItems/ManageItems';
+import InventoryDetail from './Components/User/InventoryDetail/InventoryDetail';
+import AddFruit from './Components/User/AddFruit/AddFruit';
+import MyItems from './Components/User/MyItems/MyItems';
+import ManageItems from './Components/User/ManageItems/ManageItems';
 import NotFound from './Components/NotFound/NotFound';
 import Blogs from './Components/Blogs/Blogs';
 

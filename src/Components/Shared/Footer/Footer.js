@@ -34,7 +34,7 @@ const Footer = () => {
             </footer>
 
             <div className='footer-bottom' style={{ display: 'flex', justifyContent: 'space-between', paddingLeft:'50px',paddingRight:'50px',paddingTop:'15px',background: '#ffbc3e'}}>
-                <p>©Copyright 2022 Developer-Barsha.</p>
+                <p>© Copyright 2022 Developer-Barsha.</p>
 
                 <div className='social'>
                     <ul>

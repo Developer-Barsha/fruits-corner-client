@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import auth from '../../firebase.init';
+import auth from '../../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import './InventoryDetail.css'
 

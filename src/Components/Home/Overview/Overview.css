@@ -7,7 +7,7 @@
     padding: 20px 70px;
 }
 
-.charts-container h1{
+.overview h1{
     padding-left: 70px;
     padding-top: 30px;
     font-size: 40px;
@@ -68,7 +68,7 @@
         padding: 20px;
     }
 
-    .charts-container h1{
+    .overview h1{
         padding-left: 20px;
     }
     

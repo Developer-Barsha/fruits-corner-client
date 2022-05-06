@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
 import auth from '../../../firebase.init';
 import './Login.css'
 
@@ -13,7 +14,7 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
     const emailRef = useRef('');
-    if(user){
+    if (user) {
         navigate(from, { replace: true });
     }
 
@@ -22,6 +23,10 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         
+        await signInWithEmailAndPassword(email, password);
+        const { data } = await axios.post('http://localhost:5000/login',{ email });
+        localStorage.setItem('accessToken', data.accessToken);
+
         if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email) === false) {
             return toast('Invalid Email')
         }
@@ -34,13 +39,9 @@ const Login = () => {
         if (loading) {
             return toast('Loading...')
         }
-        
-        await signInWithEmailAndPassword(email, password);
-
     }
 
     const sendResetEmail = async () => {
-        console.log(emailRef.current.value);
         if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(emailRef.current.value) === false) {
             return toast('Invalid Email')
         }

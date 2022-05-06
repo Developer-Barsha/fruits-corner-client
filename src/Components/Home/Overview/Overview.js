@@ -1,8 +1,8 @@
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import React, { useEffect, useState } from 'react';
-import './Graphs.css'
+import './Overview.css'
 
-const Graphs = () => {
+const Overview = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
         fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits')
@@ -30,7 +30,7 @@ const Graphs = () => {
     // const color = colors[Math.floor(Math.random() * colors.length)];
 
     return (
-        <section className='charts-container'>
+        <section className='overview'>
             <h1>Overview</h1>
             <div className='charts'>
                 <div className="chart">
@@ -53,4 +53,4 @@ const Graphs = () => {
     );
 };
 
-export default Graphs;
+export default Overview;
