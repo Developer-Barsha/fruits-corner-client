@@ -1,0 +1,10 @@
+.spinner{
+    position: absolute;
+    left: 30vw;
+}
+@media only screen and (max-width:700px){
+    .spinner{
+        position: absolute;
+        left: 20vw;
+    }
+}
