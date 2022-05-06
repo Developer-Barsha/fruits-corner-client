@@ -28,7 +28,7 @@ const Contact = () => {
 
                     <div className='contact-info'>
                         <div className='d-flex align-items-center justify-content-between' style={{ width: '60%' }}>
-                            <div>
+                            <div className='d-flex flex-column gap-3 justify-content-center'>
                                 <ul>
                                     <li><i className="fa-solid fa-earth-asia"></i>2307 Sadar, Narsingdi</li>
                                     <li><i className="fa-solid fa-map-location-dot"></i>Bangladesh</li>

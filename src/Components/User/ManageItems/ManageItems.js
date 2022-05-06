@@ -32,7 +32,7 @@ const ManageItems = () => {
         <section className='manage-items'>
             <h2 className='text-center pb-3'>Manage Inventories</h2>
             <div>
-                <Table striped bordered hover className='table'>
+                <Table striped bordered hover responsive className='table'>
                     <thead>
                         <tr>
                             <th>Name</th>

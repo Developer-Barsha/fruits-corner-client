@@ -5,6 +5,7 @@
 .table{
     color: #ffbc3e;
     border: 1px solid #ffbc3e;
+    overflow: scroll;
 } 
 .fruit-row{ 
     color: #8259ff;

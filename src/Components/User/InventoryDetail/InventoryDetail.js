@@ -17,15 +17,15 @@ const InventoryDetail = () => {
             .then(data => setFruit(data));
     }, []);
 
-    const handleUpdateFruit = e => {
+    const handleUpdateQuantity = e => {
         e.preventDefault();
-        const name = e.target.name.value || fruit.name;
-        const email = fruit.email ? fruit.email : user?.email;
-        const image = e.target.image.value || fruit.image;
-        const supplier = e.target.supplier.value || fruit.supplier;
-        const price = e.target.price.value || fruit.price;
-        const quantity = e.target.quantity.value || fruit.quantity;
-        const description = e.target.description.value || fruit.description;
+        const name = fruit.name;
+        const email = fruit.email;
+        const image = fruit.image;
+        const supplier = fruit.supplier;
+        const price = fruit.price;
+        const quantity = JSON.parse(fruit?.quantity) + JSON.parse(e.target.quantity.value);
+        const description = fruit.description;
 
         const updatedFruit = { name, email, image, supplier, price, quantity, description };
         setFruit(updatedFruit);
@@ -81,18 +81,12 @@ const InventoryDetail = () => {
             </div>
 
             <div className='px-3 inventoryDeatail-part'>
-                <form onSubmit={handleUpdateFruit} className='w-100'>
-                    <h3>Restock The Item</h3>
+                <form onSubmit={handleUpdateQuantity} className='w-100'>
+                    <img src="https://thumbs.dreamstime.com/b/system-update-vector-illustration-concept-people-operation-can-use-landing-page-template-ui-web-mobile-app-poster-banner-flyer-146806545.jpg" className='img-fluid w-75 mx-auto d-flex' alt="" />
+                    <h3>Restock The Items</h3>
                     <div className='w-100 d-flex gap-2'>
-                        <input type="text" name="name" placeholder={fruit?.name} />
-                        <input type="text" name="supplier" placeholder='Supplier' />
-                    </div>
-                    <div className='w-100 d-flex gap-2'>
-                        <input type="number" name="price" placeholder={'Price'} />
                         <input type="number" name="quantity" placeholder={'Quantity'} />
                     </div>
-                    <input type="text" name="image" placeholder={fruit?.image?.slice(0, 40) + '...'} />
-                    <textarea className='w-100 p-2 rounded-sm' maxLength={120} rows={3} style={{ resize: 'none' }} type="text" name="description" placeholder={fruit?.description} />
                     <input type="submit" style={{ color: 'white' }} value="Restock Item" />
                 </form>
                 <button onClick={() => navigate('/manageitems')} className='manage-btn me-0'>Manage Inventories</button>
