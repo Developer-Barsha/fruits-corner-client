@@ -12,6 +12,7 @@ import MyItems from './Components/User/MyItems/MyItems';
 import ManageItems from './Components/User/ManageItems/ManageItems';
 import NotFound from './Components/NotFound/NotFound';
 import Blogs from './Components/Blogs/Blogs';
+import About from './Components/About/About';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
+        <Route path='/about' element={<About />}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>

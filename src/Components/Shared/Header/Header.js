@@ -14,6 +14,7 @@ const Header = () => {
         < nav >
             <CustomLink to={'/'}>Home</CustomLink>
             <CustomLink to={'/blogs'}>Blogs</CustomLink>
+            <CustomLink to={'/about'}>About</CustomLink>
             {
                 user &&
                     <CustomLink to={'/myitems'}>My Items</CustomLink>

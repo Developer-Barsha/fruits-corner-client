@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Banner.css'
+import './Intro.css'
 
 const Banner = () => {
     const navigate = useNavigate();
 
     return (
-        <div className='banner'>
+        <div className='intro'>
             <div className='d-flex about-img gap-3 align-items-center p-4'>
                 <div className='d-flex flex-column w-50 gap-3'>
                     <img src="https://blog.hubspot.com/hubfs/Sales_Blog/business-meetings.jpg" alt="" className='img-fluid' />

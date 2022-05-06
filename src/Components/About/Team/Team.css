@@ -1,0 +1,116 @@
+.team{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 120px;
+}
+
+.profile-card{
+    position: relative;
+    margin: 0 auto;
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(#a387f6, #8259ff);
+    border-radius: 50%;
+    padding: 30px;
+    box-shadow: 0 0 22px #3336;
+    color: white;
+}
+
+.profile-card h3, .profile-card p{
+    line-height: 20px; 
+}
+
+.profile-card:hover{
+    border-radius: 10px;
+    background: linear-gradient(#f6d596, #ffbc3e);
+    transition: 0.6s;
+    padding: 0;
+}
+
+.profile-card:hover .img img{
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+.profile-card:hover .caption{
+    opacity: 1;
+    background: linear-gradient(50deg,#a387f6, #8259ff);
+    transition: 0.6s;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.profile-card:hover .social-links{
+    opacity: 1;
+    transition: 0.8s;
+}
+
+.profile-card .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-card .img img{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    background: linear-gradient(#f6d596, #ffbc3e);
+}
+
+.caption{
+    text-align: center;
+    transform: translateY(-60px);
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+}
+
+.caption p{
+    margin: 2px 0 8px 0;
+    font-size: 17px;
+}
+
+.social-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(50deg,#b7a1facf, #8259ffb4);
+    padding: 10px;
+    border-radius: 0 10px 0 0;
+    bottom: 59px;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 0.8s;
+}
+
+.social-links a{
+    margin-right: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.social-links a:hover{
+    color: #ffbc3e;
+}
+
+@media only screen and (min-width:501px) and (max-width:800px) {
+    .team{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 20px;
+    }      
+}
+
+@media only screen and (max-width:500px) {
+    .team{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 50px 10px;
+    }    
+}

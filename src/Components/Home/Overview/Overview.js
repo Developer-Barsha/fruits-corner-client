@@ -26,12 +26,9 @@ const Overview = () => {
         totalQuantity = JSON.parse(quantity) + totalQuantity;
     }
 
-    // const colors = ['crimson', '#ff8259', '#ff5656', '#ff8259'];
-    // const color = colors[Math.floor(Math.random() * colors.length)];
-
     return (
         <section className='overview'>
-            <h1>Overview</h1>
+            <h1 className='section-title'>Overview</h1>
             <div className='charts'>
                 <div className="chart">
                     <h2>{totalItems}</h2>

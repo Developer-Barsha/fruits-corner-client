@@ -7,7 +7,7 @@
     padding: 20px 70px;
 }
 
-.overview h1{
+.section-title{
     padding-left: 70px;
     padding-top: 30px;
     font-size: 40px;
@@ -43,7 +43,6 @@
 }
 
 .chart:nth-child(1) {
-    /* background-color: #ff3ebc; */
     background: linear-gradient(#ffd78e, #ffbc3e);
 }
 
@@ -68,7 +67,7 @@
         padding: 20px;
     }
 
-    .overview h1{
+    .section-title{
         padding-left: 20px;
     }
     

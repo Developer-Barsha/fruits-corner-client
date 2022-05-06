@@ -1,9 +1,8 @@
 import React from 'react';
-import Banner from '../Banner/Banner';
 import Graphs from '../Overview/Overview';
 import Carousels from '../Carousel/Carousel';
 import Fruits from '../Fruits/Fruits';
-import './Home';
+import Features from '../Features/Features';
 
 const Home = () => {
     return (
@@ -11,7 +10,7 @@ const Home = () => {
             <Carousels />
             <Graphs></Graphs>
             <Fruits></Fruits>
-            <Banner></Banner>
+            <Features></Features>
         </div>
     );
 };

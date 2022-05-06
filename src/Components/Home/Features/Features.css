@@ -1,0 +1,43 @@
+.features{
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.features>img{
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    background-image: url('../../../images/bucket-bg.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    display: flex;
+    align-items: center;
+}
+
+.features>div{
+    width: 30%;
+}
+
+.features h4{
+    color: #ffbc3e;
+}
+
+.features h4:hover{
+    color: #8259ff;
+}
+
+@media only screen and (max-width:900px) {
+    .features{
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .features>img{
+        width: 90%;
+    }
+    
+    .features>div{
+        width: 90%;
+    }    
+}

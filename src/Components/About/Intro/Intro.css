@@ -1,0 +1,83 @@
+.intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    gap: 30px;
+    margin: 0 auto;
+    padding-top: 40px;
+    background-color: #fffbf2;
+}
+
+.intro h1{
+    position: relative;
+}
+
+.intro h1::before{
+    content: '❝';
+    color: #9876ff93;
+    position: absolute;
+    font-size: 80px;
+    top: -25px;
+    left: -42px;
+}
+
+.intro h1::after{
+    content: '❞';
+    color: #9876ff93;
+    font-size: 80px;
+    position: absolute;
+    top: 35px;
+}
+
+.intro>div{
+    width: 50%;
+}
+
+.intro .about-img{
+    width:50%;
+}
+
+.intro button{
+    width: 150px;
+    border: 0;
+    padding: 5px;
+    background: linear-gradient(#fada9d,#ffbc3e);
+    border-radius: 5px;
+    color: white;
+}
+
+.intro button:hover{
+    background: linear-gradient(#af95ff,#8259ff);
+    transition: 0.5s;
+}
+
+@media only screen and (max-width:700px){
+    .intro{
+        flex-direction: column;
+        padding: 10px 30px;
+        gap: 20px;
+    }
+
+    .intro .about-img{
+        width:100%;
+    }
+
+    .intro>div:nth-child(2){
+        width: 100%;       
+        justify-content: center;
+    }
+
+    .intro>div:nth-child(1){
+        width: 100%;        
+    }
+
+    .intro h1::before{
+        display: none;
+    }
+    
+    .intro h1::after{
+        display: none;
+    }
+    
+}
