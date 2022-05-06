@@ -1,0 +1,31 @@
+.contact-info{
+    background-color: #8259ff;
+    padding: 10px;
+    color: white;
+}
+
+.contact ul li{
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.contact-part{
+    width: 40%;
+}
+
+.contact ul li:hover{
+    color: #ffbc3e;
+}
+
+@media only screen and (max-width:900px) {
+    .contact{
+        flex-direction: column;
+    }
+    .contact-part{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}

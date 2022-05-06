@@ -3,7 +3,6 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { TrashIcon } from '@heroicons/react/solid';
 import {signOut} from 'firebase/auth'
 import {useNavigate} from 'react-router-dom'
-// import axios from 'axios';
 import auth from '../../../firebase.init';
 import Fruit from '../../Home/Fruit/Fruit';
 import axiosPrivate from '../../../api/axiosPrivate';
@@ -52,11 +51,12 @@ const MyItems = () => {
     }
 
     return (
-        <div className='fruits'>
+        <div className='fruits mx-auto'>
             { !fruits.length===0 ?
                 fruits.map(fruit => <Fruit fruit={fruit} button={button(fruit._id)} key={fruit._id} />) :
-                <div className='d-flex justify-content-center align-items-center' style={{minHeight:'100px'}}>
-                    <h3 className='text-warning'>No items added</h3>
+                <div className='d-flex flex-column justify-content-center align-items-center' style={{minHeight:'100px'}}>
+                    <img src="https://img.freepik.com/free-vector/no-data-concept-illustration_203587-28.jpg?w=2000" className='w-100 mx-auto' alt="" />
+                    <h3 className='text-warning mx-auto'>No items added</h3>
                 </div>
             }
         </div>

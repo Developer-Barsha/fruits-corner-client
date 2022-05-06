@@ -37,7 +37,8 @@ footer {
     display: flex;
     margin-bottom: 5px;
     margin-left: -30px;
-    gap: 20px;
+    gap: 8px;
+    align-items: center;
 }
 
 footer ul li:hover {
@@ -60,15 +61,18 @@ footer ul li:hover {
 }
 
 .footer-bottom li{
-    color: #000;
     font-size: 19px;
     padding: 0px 5px;
     border-radius: 50%;
 }
 
+.footer-bottom{
+    color: black;
+}
+
 .footer-bottom li:hover{
-    color: white;
     background: linear-gradient(#b197fd, #8259ff);
+    color: white;
     transition: 0.5s;
     transform: scale(1.2);
 }

@@ -24,10 +24,10 @@ const Footer = () => {
                     <div>
                         <h2 className='footer-title'>Contact</h2>
                         <ul>
-                            <li>2307 Sadar, Narsingdi</li>
-                            <li>Bangladesh</li>
-                            <li>+ (880) 9876543219</li>
-                            <li>fruitscorner@gmail.com</li>
+                            <li><i className="fa-solid fa-earth-asia"></i>2307 Sadar, Narsingdi</li>
+                            <li><i className="fa-solid fa-map-location-dot"></i>Bangladesh</li>
+                            <li><i className="fa-solid fa-phone"></i>+ (880) 9876543219</li>
+                            <li><i className="fa-solid fa-envelope"></i>fruitscorner@gmail.com</li>
                         </ul>
                     </div>
                 </div>

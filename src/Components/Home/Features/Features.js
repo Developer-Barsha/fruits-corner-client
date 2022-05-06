@@ -9,22 +9,22 @@ const Features = () => {
                 <div>
                     <div>
                         <h4>Organic Fruit</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, eum!</p>
+                        <p>Our fruits of here are 100% organic and really good for health.</p>
                     </div>
                     <div>
-                        <h4>Free pollution</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, eum!</p>
+                        <h4>100% healthy</h4>
+                        <p>You will find the fruits 100% healthy. We try our best to provide best fruits.</p>
                     </div>
                 </div>
                 <img src='https://pics.clipartpng.com/Basket_with_Fruits_PNG_Clipart-210.png' alt="" />
                 <div>
                     <div>
                         <h4>Fresh Fruit</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, eum!</p>
+                        <p>We do not provide any fruit which isn't fresh. We care a lot about it.</p>
                     </div>
                     <div>
                         <h4>Natural Fruit</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, eum!</p>
+                        <p>Natural Fruits help lower blood pressure, and flavonoids.</p>
                     </div>
                 </div>
             </div>
