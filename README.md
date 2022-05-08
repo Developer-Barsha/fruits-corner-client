@@ -1,4 +1,4 @@
-# Fruits Center
+# Fruits Corner
 ## Live Site Link : [Click to open](https://fruits-corner.netlify.app)
 
 ### My projects description:
