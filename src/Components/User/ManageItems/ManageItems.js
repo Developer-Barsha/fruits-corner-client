@@ -3,6 +3,7 @@ import Table from 'react-bootstrap/Table'
 import { TrashIcon } from '@heroicons/react/solid'
 import { useNavigate } from 'react-router-dom';
 import './Manageitems.css';
+import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 
 const ManageItems = () => {
     const navigate = useNavigate();
@@ -37,6 +38,7 @@ const ManageItems = () => {
                 <Table striped bordered hover responsive className='table'>
                     <thead>
                         <tr>
+                            {/* <th>Img</th> */}
                             <th>Name</th>
                             <th>Price</th>
                             <th>Quantity</th>
@@ -46,16 +48,18 @@ const ManageItems = () => {
                     </thead>
 
                     <tbody>
-                        {
+                        {   fruits[0] ?
                             fruits.map(fruit =>
                                 <tr key={fruit._id} className='fruit-row'>
+                                    {/* <td><img style={{width:'30px', borderRadius:'50%'}} src={fruit.image}/></td> */}
                                     <td>{fruit.name}</td>
                                     <td>{fruit.price}</td>
                                     <td>{fruit.quantity}</td>
                                     <td>{fruit.supplier}</td>
                                     <td><button onClick={() => handleDelete(fruit._id)} className='delete-btn'><TrashIcon style={{ width: '17px' }} /></button></td>
                                 </tr>
-                            )
+                            ) :
+                            <LoadingSpinner />
                         }
                     </tbody>
                 </Table>

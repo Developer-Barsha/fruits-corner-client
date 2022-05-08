@@ -35,7 +35,6 @@
         margin: 0;
     }
     .contact-info> h1{
-        font-size: 80px;
-        padding: 10px;
+        display: none;
     }
 }

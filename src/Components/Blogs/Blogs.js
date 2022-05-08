@@ -12,7 +12,7 @@ const Blogs = () => {
 
     return (
         <section>
-            <h2 className='section-title'>Our Blogs</h2>
+            <h2 className='section-title mb-2'>Our Blogs</h2>
             <div className='blogs'>
                 {
                     blogs.map(blog =>

@@ -16,8 +16,7 @@ const Carousels = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>Fresh Fruits</h3>
-                        <p>Fruits are an important part of a healthy eating pattern.</p>
+                        <h3>Fruits Corner</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -31,7 +30,6 @@ const Carousels = () => {
 
                     <Carousel.Caption>
                         <h3>Natural Fruits</h3>
-                        <p>Natural Fruits help lower blood pressure, and flavonoids.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -44,8 +42,7 @@ const Carousels = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Organic Fruits</h3>
-                        <p>Organic foods have more beneficial nutrients, like antioxidants</p>
+                        <h3>Fresh Fruits</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

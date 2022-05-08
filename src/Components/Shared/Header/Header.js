@@ -25,11 +25,11 @@ const Header = () => {
             }
             {
                 user &&
-                    <CustomLink to={'/manageinventory'}>Manage Inventory</CustomLink>
+                    <CustomLink to={'/manageinventory'}>Manage Items</CustomLink>
             }
             {
                 user ?
-                    <button className='signOut-btn' onClick={() => signOut(auth)}>Sign Out</button>
+                    <button className='signOut-btn' onClick={() => signOut(auth)}>Log Out</button>
                     :
                     <CustomLink to={'/login'}>Login</CustomLink>
             }

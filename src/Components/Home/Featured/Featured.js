@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Featured.css'
 
 const Featured = () => {
     const [fruits, setFruits] = useState([]);

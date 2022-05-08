@@ -19,7 +19,7 @@ const InventoryDetail = () => {
         fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits/' + id)
             .then(res => res.json())
             .then(data => setFruit(data));
-    }, []);
+    }, [id]);
 
     // handle increate fruit quantity
     const handleUpdateQuantity = e => {
@@ -36,7 +36,7 @@ const InventoryDetail = () => {
         const price = fruit.price;
         const quantity = JSON.parse(fruit?.quantity) + JSON.parse(e.target.quantity.value);
         const description = fruit.description;
-        const sold = fruit?.sold ? fruit?.sold  : 1;
+        const sold = fruit?.sold ? fruit?.sold  : 0;
 
         const updatedFruit = { name, email, image, supplier, price, quantity, description, sold };
         setFruit(updatedFruit);
@@ -60,7 +60,7 @@ const InventoryDetail = () => {
         const price = fruit?.price;
         const quantity = JSON.parse(fruit?.quantity) !== 0 ? JSON.parse(fruit?.quantity) - 1 : JSON.parse(fruit?.quantity);
         const description = fruit?.description;
-        const sold = fruit?.sold ? fruit?.sold + 1 : 0+1;
+        const sold = quantity>=0 ? (fruit?.sold ? fruit?.sold + 1 : 0+1) : fruit?.sold;
 
         const updatedFruit = { name, email, image, supplier, price, quantity, description, sold };
         setFruit(updatedFruit);
@@ -90,7 +90,7 @@ const InventoryDetail = () => {
                             <p className='fruit-info'> <span>Price </span> : {price}</p>
                         </div>
                         <p className='fruit-info'> <span>Supplier </span> : {supplier}</p>
-                        <button onClick={handleDelivered} className='item-btn'>{quantity !== 0 ? 'Delivered' : 'Sold Out'}</button>
+                        {quantity !== 0 ? <button onClick={handleDelivered} className='item-btn'>Delivered</button> :  <button className='item-btn'>Sold Out</button>}
                     </div>
                 </div>
                 <p>{description}</p>

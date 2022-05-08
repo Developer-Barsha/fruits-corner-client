@@ -105,3 +105,10 @@ footer ul li:hover {
         order: 1;
     }
 }
+
+@media only screen and (max-width:400px) {
+    .footer-first, .footer-sec  {
+        width: 100%;
+        flex-direction: column;
+    }
+}

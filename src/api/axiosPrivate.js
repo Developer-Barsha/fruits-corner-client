@@ -17,11 +17,11 @@ axiosPrivate.interceptors.request.use(function (config) {
     console.log(error.message);
     if (error.response.status === 401) {
         signOut(auth);
-        navigate('/login')
+        navigate('/login');
     }
     if (error.response.status === 403) {
         signOut(auth);
-        navigate('/login')
+        navigate('/login');
     }
     return Promise.reject(error);
 });

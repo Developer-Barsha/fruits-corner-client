@@ -1,32 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import auth from '../../../firebase.init'
-import {useAuthState, useSignInWithGoogle} from 'react-firebase-hooks/auth'
+import {useSignInWithGoogle} from 'react-firebase-hooks/auth'
 import './SocialLogin.css'
 import { useLocation, useNavigate } from 'react-router-dom';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import { toast, ToastContainer } from 'react-toastify';
 
 const SocialLogin = () => {
-    const [user] = useAuthState(auth);
-    const [signInWithGoogle, , loading, error] = useSignInWithGoogle(auth);
-    const [message, setMessage] = useState('');
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+    // show error
+    useEffect(()=>{
+        if(error){
+            toast(error?.message);
+        }
+    }, [])
 
     // navigate when user is found
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
+    
     if (user) {
-        navigate(from, { replace: true });
+        return navigate(from, { replace: true });
+    }
+    if (loading) {
+        return <LoadingSpinner />;
     }
 
-    // show error
-    useEffect(()=>{
-        if(error){
-            setMessage(error?.message);
-        }
-    }, [])
 
     return (
         <section>
-            <p style={{color:'#ff5858'}}>{message}</p>
+            <ToastContainer/>
+            {error&& <p className='text-danger'>{error.message}</p>}
             <div className='socialLogin'>
             <button onClick={()=>signInWithGoogle()}>
                 <img src="https://www.transparentpng.com/thumb/google-logo/google-logo-png-icon-free-download-SUF63j.png" alt="" />
