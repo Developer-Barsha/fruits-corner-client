@@ -29,7 +29,7 @@ const Header = () => {
             }
             {
                 user ?
-                    <button className='signOut-btn' onClick={() => signOut(auth)}>Log Out</button>
+                    <button className='signOut-btn' onClick={() => signOut(auth)}>Log Out <i class="fa-solid fa-right-from-bracket"></i></button>
                     :
                     <CustomLink to={'/login'}>Login</CustomLink>
             }
