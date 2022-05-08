@@ -38,7 +38,7 @@ const Login = () => {
             return toast('Password too short')
         }
         if (error) {
-            return toast(error?.message);
+            toast(error?.message);
         }
 
         await signInWithEmailAndPassword(email, password);

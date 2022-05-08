@@ -35,7 +35,7 @@ const Register = () => {
             return toast('Invalid Email')
         }
         if (error) {
-            return toast(error?.message);
+            toast(error?.message);
         }
         if (loading) {
             return <LoadingSpinner />
