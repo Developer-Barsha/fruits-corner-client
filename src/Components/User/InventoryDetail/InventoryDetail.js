@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import auth from '../../../firebase.init';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify'
 import './InventoryDetail.css'
 
 const InventoryDetail = () => {
     const { id } = useParams();
-    const [user] = useAuthState(auth);
     const [fruit, setFruit] = useState({});
     const navigate = useNavigate();
 
@@ -54,7 +51,7 @@ const InventoryDetail = () => {
     // handle fruit delivered
     const handleDelivered = () => {
         const name = fruit?.name;
-        const email = user?.email;
+        const email = fruit?.email;
         const image = fruit.image;
         const supplier = fruit?.supplier;
         const price = fruit?.price;
