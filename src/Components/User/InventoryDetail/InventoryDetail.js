@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify'
+import { toast, ToastContainer } from 'react-toastify';
+import update from './../../../images/inventoryDetail.jpg';
 import './InventoryDetail.css'
 
 const InventoryDetail = () => {
@@ -98,7 +99,7 @@ const InventoryDetail = () => {
             {/* input to increare fruit quantity */}
             <div className='px-3 inventoryDeatail-part'>
                 <form onSubmit={handleUpdateQuantity} className='w-100'>
-                    <img src="https://thumbs.dreamstime.com/b/system-update-vector-illustration-concept-people-operation-can-use-landing-page-template-ui-web-mobile-app-poster-banner-flyer-146806545.jpg" className='img-fluid w-75 mx-auto d-flex' alt="" />
+                    <img src={update} className='img-fluid w-75 mx-auto d-flex' alt="" />
                     <h3>Restock The Items</h3>
                     <div className='w-100 d-flex gap-2'>
                         <input type="number" name="quantity" placeholder={'Quantity'} />
