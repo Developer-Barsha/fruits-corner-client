@@ -27,7 +27,7 @@ const AddFruit = () => {
         const description = e.target.description.value;
 
         const fruit = { name, email, image, supplier, price, quantity, description };
-        
+
         fetch('https://infinite-lowlands-70374.herokuapp.com/allfruits', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },

@@ -7,7 +7,7 @@ const Fruit = ({ fruit, button }) => {
 
     return (
         <div className='fruit'>
-            <img src={image} alt='' style={{height:'225px'}} className='w-75 d-flex mx-auto' />
+            <img src={image} alt='' style={{ height: '225px' }} className='w-75 d-flex mx-auto' />
             <h1 className='fruit-name'>{name}</h1>
             <div>
                 <p className='fruit-info'> <span>Price </span> : {price}</p>

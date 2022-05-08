@@ -20,7 +20,7 @@ const Banner = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', justifyContent: 'center' }}>
                 <h1>We are best at transportation.</h1>
                 <p>We really care about tranporting harmlessly. We do our best and take care of the products while transporting so that nothing bad happens to the products and you get fresh fruits.</p>
-                <button onClick={()=>navigate('/about')}>Know more</button>
+                <button onClick={() => navigate('/about')}>Know more</button>
                 <p className='mt-2'>
                     <span style={{ fontWeight: '800', color: '#8259ff' }}>John Smith</span>
                     <br />

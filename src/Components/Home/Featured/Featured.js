@@ -10,7 +10,7 @@ const Featured = () => {
             .then(res => res.json())
             .then(data => setFruits(data));
 
-            //getting and setting the highest
+        //getting and setting the highest
         const quantities = fruits?.map(item => JSON.parse(item.quantity));
         const highest = Math.max(...quantities);
         const highestFruit = fruits.find(fruit => JSON.parse(fruit.quantity) === JSON.parse(highest));
@@ -34,7 +34,7 @@ const Featured = () => {
                 </div>
 
                 <img src={fruit?.image} alt="" />
-                
+
                 <div>
                     <div>
                         <h4>{fruit?.supplier}</h4>

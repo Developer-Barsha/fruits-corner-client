@@ -17,16 +17,16 @@ const Fruits = () => {
     }, []);
 
     // button for fruits
-    const button = id => <button onClick={() => navigate(`/inventory/${id}`)}>Manage <ArrowRightIcon style={{width:'20px'}}/> </button>;
+    const button = id => <button onClick={() => navigate(`/inventory/${id}`)}>Manage <ArrowRightIcon style={{ width: '20px' }} /> </button>;
 
     return (
         <section>
             <div className='fruits'>
-                { fruits[0]?.name ?
-                    (fruits.slice(0, 6)).map(fruit => <Fruit button={button(fruit._id)} fruit={fruit} key={fruit._id} />) : <LoadingSpinner/>
+                {fruits[0]?.name ?
+                    (fruits.slice(0, 6)).map(fruit => <Fruit button={button(fruit._id)} fruit={fruit} key={fruit._id} />) : <LoadingSpinner />
                 }
             </div>
-            <button onClick={()=>navigate('/manageinventory')} className='manage-btn'>Manage Inventories</button>
+            <button onClick={() => navigate('/manageinventory')} className='manage-btn'>Manage Inventories</button>
         </section>
     );
 };

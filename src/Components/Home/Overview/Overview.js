@@ -5,7 +5,7 @@ import './Overview.css'
 
 const Overview = () => {
     const navigate = useNavigate();
-    
+
     // getting all fruit items
     const [items, setItems] = useState([]);
     useEffect(() => {
@@ -40,17 +40,17 @@ const Overview = () => {
                 <div className="chart">
                     <h2>{totalItems}</h2>
                     <p>The amount of different items</p>
-                    <button onClick={()=>navigate('/manageinventory')}>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
+                    <button onClick={() => navigate('/manageinventory')}>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
                 </div>
                 <div className="chart">
                     <h2>{totalSuppliers.length}</h2>
                     <p>The amount of total suppliers</p>
-                    <button onClick={()=>navigate('/manageinventory')}>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
+                    <button onClick={() => navigate('/manageinventory')}>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
                 </div>
                 <div className="chart">
                     <h2>{totalQuantity}</h2>
                     <p>Total quantity of all items</p>
-                    <button onClick={()=>navigate('/manageinventory')}>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
+                    <button onClick={() => navigate('/manageinventory')}>See all <ArrowRightIcon style={{ width: '20px' }} /></button>
                 </div>
             </div>
         </section>

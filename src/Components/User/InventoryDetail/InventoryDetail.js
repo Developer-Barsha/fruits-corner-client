@@ -22,7 +22,7 @@ const InventoryDetail = () => {
     const handleUpdateQuantity = e => {
         e.preventDefault();
 
-        if(e.target.quantity.value<=0){
+        if (e.target.quantity.value <= 0) {
             return toast('Invalid number')
         }
 
@@ -33,7 +33,7 @@ const InventoryDetail = () => {
         const price = fruit.price;
         const quantity = JSON.parse(fruit?.quantity) + JSON.parse(e.target.quantity.value);
         const description = fruit.description;
-        const sold = fruit?.sold ? fruit?.sold  : 0;
+        const sold = fruit?.sold ? fruit?.sold : 0;
 
         const updatedFruit = { name, email, image, supplier, price, quantity, description, sold };
         setFruit(updatedFruit);
@@ -57,7 +57,7 @@ const InventoryDetail = () => {
         const price = fruit?.price;
         const quantity = JSON.parse(fruit?.quantity) !== 0 ? JSON.parse(fruit?.quantity) - 1 : JSON.parse(fruit?.quantity);
         const description = fruit?.description;
-        const sold = quantity>=0 ? (fruit?.sold ? fruit?.sold + 1 : 0+1) : fruit?.sold;
+        const sold = quantity >= 0 ? (fruit?.sold ? fruit?.sold + 1 : 0 + 1) : fruit?.sold;
 
         const updatedFruit = { name, email, image, supplier, price, quantity, description, sold };
         setFruit(updatedFruit);
@@ -87,7 +87,7 @@ const InventoryDetail = () => {
                             <p className='fruit-info'> <span>Price </span> : {price}</p>
                         </div>
                         <p className='fruit-info'> <span>Supplier </span> : {supplier}</p>
-                        {quantity !== 0 ? <button onClick={handleDelivered} className='item-btn'>Delivered</button> :  <button className='item-btn'>Sold Out</button>}
+                        {quantity !== 0 ? <button onClick={handleDelivered} className='item-btn'>Delivered</button> : <button className='item-btn'>Sold Out</button>}
                     </div>
                 </div>
                 <p>{description}</p>

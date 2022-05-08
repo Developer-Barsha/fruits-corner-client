@@ -17,15 +17,15 @@ const Header = () => {
             <CustomLink to={'/about'}>About</CustomLink>
             {
                 user &&
-                    <CustomLink to={'/myitems'}>My Items</CustomLink>
+                <CustomLink to={'/myitems'}>My Items</CustomLink>
             }
             {
                 user &&
-                    <CustomLink to={'/addfruit'}>Add Item</CustomLink>
+                <CustomLink to={'/addfruit'}>Add Item</CustomLink>
             }
             {
                 user &&
-                    <CustomLink to={'/manageinventory'}>Manage Items</CustomLink>
+                <CustomLink to={'/manageinventory'}>Manage Items</CustomLink>
             }
             {
                 user ?

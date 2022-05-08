@@ -48,7 +48,7 @@ const ManageItems = () => {
                     </thead>
 
                     <tbody>
-                        {   fruits[0] ?
+                        {fruits[0] ?
                             fruits.map(fruit =>
                                 <tr key={fruit._id} className='fruit-row'>
                                     {/* <td><img style={{width:'30px', borderRadius:'50%'}} src={fruit.image}/></td> */}

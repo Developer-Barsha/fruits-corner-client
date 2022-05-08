@@ -37,8 +37,8 @@ const Register = () => {
         if (error) {
             return toast(error?.message);
         }
-        if(loading){
-            return <LoadingSpinner/>
+        if (loading) {
+            return <LoadingSpinner />
         }
     }
 
@@ -51,7 +51,7 @@ const Register = () => {
                 <input type="email" name="email" placeholder='Your Email' required />
                 <input type="password" name="password" placeholder='Your Password' required />
                 <input type="submit" value="Register" />
-                {error&& <p className='text-danger'>{error.message}</p>}
+                {error && <p className='text-danger'>{error.message}</p>}
             </form>
             <p>Already have Account? <Link to='/login' style={{ color: "#8259ff" }}>Login Here</Link></p>
             <SocialLogin></SocialLogin>

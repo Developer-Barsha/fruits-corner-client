@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { TrashIcon } from '@heroicons/react/solid';
-import {signOut} from 'firebase/auth'
-import {useNavigate} from 'react-router-dom'
+import { signOut } from 'firebase/auth'
+import { useNavigate } from 'react-router-dom'
 import auth from '../../../firebase.init';
 import Fruit from '../../Home/Fruit/Fruit';
 import axiosPrivate from '../../../api/axiosPrivate';
@@ -15,17 +15,17 @@ const MyItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user?.email;
-            try{
+            try {
                 const { data } = await axiosPrivate.get(`https://infinite-lowlands-70374.herokuapp.com/userfruits?email=${email}`);
                 setFruits(data);
             }
-            catch(error){
+            catch (error) {
                 console.log(error.message);
-                if(error.response.status===401){
+                if (error.response.status === 401) {
                     signOut(auth);
                     navigate('/login');
                 }
-                if(error.response.status===403){
+                if (error.response.status === 403) {
                     signOut(auth);
                     navigate('/login');
                 }
@@ -52,12 +52,12 @@ const MyItems = () => {
 
     return (
         <div className='fruits mx-auto'>
-            { 
-                fruits.map(fruit => <Fruit fruit={fruit} button={button(fruit._id)} key={fruit._id} />) 
+            {
+                fruits.map(fruit => <Fruit fruit={fruit} button={button(fruit._id)} key={fruit._id} />)
             }
             {
-                fruits.length===0 &&
-                <div className='d-flex flex-column justify-content-center align-items-center' style={{minHeight:'100px'}}>
+                fruits.length === 0 &&
+                <div className='d-flex flex-column justify-content-center align-items-center' style={{ minHeight: '100px' }}>
                     <img src="https://img.freepik.com/free-vector/no-data-concept-illustration_203587-28.jpg?w=2000" className='w-100 mx-auto' alt="" />
                     <h3 className='text-warning mx-auto'>No items added</h3>
                 </div>
